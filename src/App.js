@@ -1,13 +1,14 @@
 import './App.css';
 import React from 'react';
-import NavBar from './components/NavBar/NavBar';
+import { ButtonAppBar } from '../src/components/NavBar/NavBar';
+import { ItemListContainer } from '../src/components/ItemList/ItemList';
 
-
-const App = props => {
+const App = () => {
 
   return <>
-  <NavBar />
   
+    <ButtonAppBar />
+    <ItemListContainer />
   </>
 }
 

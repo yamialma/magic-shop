@@ -1,21 +1,47 @@
 import React from 'react';
-/*import {
-    AppBar, Toolbar, Typography, makeStyles, ListItem, ListItemText, List
-} from '@material-ui/core';*/
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { ShopBag } from '../CardWidget/CardWidget'
 
-const NavBar = props => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  offset: {
+    ...theme.mixins.toolbar, // min-height: 56px;
+    marginBottom: "1rem", // 
+  },
+}));
 
-    return <>
-      <div className="NavBar">
-        <h1>Logo Coconut Shop</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-      </div>
-    </>
+export const ButtonAppBar = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar color="secondary">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Coconut Market
+          </Typography>
+          <Button color="inherit">Ingresar</Button>
+          <Button color="inherit"><ShopBag/></Button>
+        </Toolbar>
+      </AppBar>
+      <div className={classes.offset}></div>
+    </div>
+  );
 }
-  
-export default NavBar;
