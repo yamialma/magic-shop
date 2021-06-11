@@ -29,7 +29,7 @@ export const ButtonAppBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar color="secondary">
+      <AppBar color="inherit">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />

@@ -1,4 +1,10 @@
 .Banner {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
+    background-color: cadetblue;
+    color: #ffffff;
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
 }

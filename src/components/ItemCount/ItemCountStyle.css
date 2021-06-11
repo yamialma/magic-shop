@@ -1,0 +1,33 @@
+.Paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Paper h2, h4{
+    margin: 0.5em;
+}
+
+.Paper h4 {
+    margin:0.5em;
+    color: #7f8688;
+}
+
+
+.botonMasYmenos {
+    color: cadetblue;
+}
+
+.botonAgregar{
+    margin-top: 1em !important;
+    background-color: cadetblue !important;
+    color: beige !important;
+}
+
+.Cantidad {
+    display: flex;
+    justify-items: center;
+    padding: 1em;
+    border: none;
+}
