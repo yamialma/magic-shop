@@ -5,15 +5,14 @@
     align-items: center;
 }
 
-.Paper h2, h4{
-    margin: 0.5em;
+h2, h4{
+    margin: 0.1em;
 }
 
-.Paper h4 {
-    margin:0.5em;
+h4 {
+    margin:0.1em;
     color: #7f8688;
 }
-
 
 .botonMasYmenos {
     color: cadetblue;
