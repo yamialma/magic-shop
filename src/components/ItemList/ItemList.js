@@ -13,7 +13,7 @@ const myPromise = new Promise ((resolve, reject) => {
                 description: 'Beepure',
                 idProduct: 14,
                 price: 750,
-                photo:"/img/miel-cremosa-beepure.jpg",
+                photo:'./img/miel-cremosa-beepure.jpg',
                 alt:"Granola en frasco 500g Beepure",
                 stock: 15
             },
@@ -67,13 +67,7 @@ export const ItemList = () => {
             data.length === 0 ? (<div className={classes.root}><CircularProgress disableShrink/></div>) : (<Grid container>
                 <Grid item xs={12}>
                     <Grid container justify="center">
-                        {data.map((element, i) => <Item key={element.title}
-                            title={element.title}
-                            description={element.description}
-                            price={element.price}
-                            photo={element.photo}
-                            stock={element.stock}
-                        />)}
+                        {data.map((element, i) => <Item index={i} {...element} />)}
                     </Grid>
                 </Grid>
             </Grid>)
